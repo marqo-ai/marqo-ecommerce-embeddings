@@ -14,7 +14,7 @@ They are over 30% better compared to Amazon Titan Embedding services for e-comme
 | **Embedding Model** | **#Params (m)** | **Dimension** | **HuggingFace**                    | **Download .pt**                                                                                            |
 |---------------------| --- |---------------|------------------------------------|-------------------------------------------------------------------------------------------------------------|
 | Marqo-Ecommerce-B   | 203 | 768           | Marqo/marqo-ecommerce-embeddings-B | [link](https://marqo-gcl-public.s3.us-west-2.amazonaws.com/marqo-general-ecomm/marqo-ecomm-embeddings-b.pt) |
-| Marqo-Ecommerce-L   | 652 | 1024          | Marqo/marqo-ecommerce-embeddings-L | [link](https://marqo-gcl-public.s3.us-west-2.amazonaws.com/marqo-general-ecomm/marqo-ecomm-embeddings-l.pt))                                       |
+| Marqo-Ecommerce-L   | 652 | 1024          | Marqo/marqo-ecommerce-embeddings-L | [link](https://marqo-gcl-public.s3.us-west-2.amazonaws.com/marqo-general-ecomm/marqo-ecomm-embeddings-l.pt)                                       |
 
 ### HuggingFace 
 

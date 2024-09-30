@@ -1,4 +1,4 @@
-# Marqo E-commerce Models
+# Marqo E-commerce Embedding Models
 In this work, we introduce two state-of-the-art embedding models for e-commerce: 
 Marqo-Ecommerce-B and Marqo-Ecommerce-L. 
 They are over 30% better compared to Amazon Titan Embedding services for e-commerce retrieval tasks.

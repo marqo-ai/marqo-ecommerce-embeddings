@@ -16,11 +16,41 @@ They are over 30% better compared to Amazon Titan Embedding services for e-comme
 | Marqo-Ecommerce-B   | 203 | 768           | Marqo/marqo-ecommerce-embeddings-B | [link](https://marqo-gcl-public.s3.us-west-2.amazonaws.com/marqo-general-ecomm/marqo-ecomm-embeddings-b.pt) |
 | Marqo-Ecommerce-L   | 652 | 1024          | Marqo/marqo-ecommerce-embeddings-L | [link](https://www.notion.so/d5bc374cba1c4d4c8e47b03bba66f11f?pvs=21)                                       |
 
-### HuggingFace 
+### HuggingFace with OpenCLIP
+```
+pip install open_clip_torch
+```
+```python
+from PIL import Image
+import open_clip
+import requests
+import torch
 
+# Specify model from Hugging Face Hub
+model_name = 'hf-hub:Marqo/marqo-ecommerce-embeddings-B'
+model, preprocess_train, preprocess_val = open_clip.create_model_and_transforms(model_name)
+tokenizer = open_clip.get_tokenizer(model_name)
 
+# Preprocess the image and tokenize text inputs
+# Load an example image from a URL
+img = Image.open(requests.get('https://raw.githubusercontent.com/marqo-ai/marqo-FashionCLIP/main/docs/fashion-hippo.png', stream=True).raw)
+image = preprocess_val(img).unsqueeze(0)
+text = tokenizer(["a hat", "a t-shirt", "shoes"])
 
-### OpenClip
+# Perform inference
+with torch.no_grad(), torch.cuda.amp.autocast():
+    image_features = model.encode_image(image, normalize=True)
+    text_features = model.encode_text(text, normalize=True)
+
+    # Calculate similarity probabilities
+    text_probs = (100.0 * image_features @ text_features.T).softmax(dim=-1)
+
+# Display the label probabilities
+print("Label probs:", text_probs)
+# [9.9955e-01, 4.4712e-04, 4.4010e-06]]
+```
+### HuggingFace with transformers
+
 
 
 ## Detailed Performance

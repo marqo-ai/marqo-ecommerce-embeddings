@@ -1,4 +1,4 @@
-# Marqo E-commerce Models
+# Marqo E-commerce Embedding Models
 In this work, we introduce two state-of-the-art embedding models for e-commerce: 
 Marqo-Ecommerce-B and Marqo-Ecommerce-L. 
 They are over 30% better compared to Amazon Titan Embedding services for e-commerce retrieval tasks.
@@ -14,7 +14,7 @@ They are over 30% better compared to Amazon Titan Embedding services for e-comme
 | **Embedding Model** | **#Params (m)** | **Dimension** | **HuggingFace**                    | **Download .pt**                                                                                            |
 |---------------------| --- |---------------|------------------------------------|-------------------------------------------------------------------------------------------------------------|
 | Marqo-Ecommerce-B   | 203 | 768           | Marqo/marqo-ecommerce-embeddings-B | [link](https://marqo-gcl-public.s3.us-west-2.amazonaws.com/marqo-general-ecomm/marqo-ecomm-embeddings-b.pt) |
-| Marqo-Ecommerce-L   | 652 | 1024          | Marqo/marqo-ecommerce-embeddings-L | [link](https://www.notion.so/d5bc374cba1c4d4c8e47b03bba66f11f?pvs=21)                                       |
+| Marqo-Ecommerce-L   | 652 | 1024          | Marqo/marqo-ecommerce-embeddings-L | [link](https://marqo-gcl-public.s3.us-west-2.amazonaws.com/marqo-general-ecomm/marqo-ecomm-embeddings-l.pt)                                       |
 
 ### HuggingFace with OpenCLIP
 ```
@@ -58,31 +58,32 @@ print("Label probs:", text_probs)
 
 | **Embedding Model** | **mAP** | **P@10** | **R@10** | **MRR** |
 | --- | --- | --- | --- | --- |
+| Marqo-Ecommerce-L | **0.682** | **0.089** | **0.878** | **0.683** |
+| Marqo-Ecommerce-B | 0.623 | 0.084 | 0.832 | 0.624 |
 | Amazon-Titan-MultiModal | 0.475 | 0.065 | 0.648 | 0.475 |
 | ViT-B-16-SigLip | 0.476 | 0.067 | 0.660 | 0.477 |
 | ViT-L-16-SigLip | 0.540 | 0.073 | 0.722 | 0.540 |
-| Marqo-Ecommerce-B | 0.623 | 0.084 | 0.832 | 0.624 |
-| Marqo-Ecommerce-L | **0.682** | **0.089** | **0.878** | **0.683** |
+
 
 **GoogleShopping-Category2Image Retrieval.**  
 
 | **Embedding Model** | **mAP** | **P@10** | **MRR** | **nDCG@10** |
 | --- | --- | --- | --- | --- |
+| Marqo-Ecommerce-L | **0.463** | **0.652** | **0.822** | **0.666** |
+| Marqo-Ecommerce-B | 0.423 | 0.629 | 0.810 | 0.644 |
 | Amazon-Titan-MultiModal | 0.246 | 0.429 | 0.642 | 0.446 |
 | ViT-B-16-SigLip | 0.277 | 0.458 | 0.660 | 0.473 |
 | ViT-L-16-SigLip | 0.324 | 0.497 | 0.687 | 0.509 |
-| Marqo-Ecommerce-B | 0.423 | 0.629 | 0.810 | 0.644 |
-| Marqo-Ecommerce-L | **0.463** | **0.652** | **0.822** | **0.666** |
 
 **AmazonProducts-Text2Image Retrieval.** 
 
 | **Embedding Model** | **mAP** | **P@10** | **R@10** | **MRR** |
 | --- | --- | --- | --- | --- |
+| Marqo-Ecommerce-L | **0.658** | **0.096** | **0.854** | **0.663** |
+| Marqo-Ecommerce-B | 0.592 | 0.089 | 0.795 | 0.597 |
 | Amazon-Titan-MultiModal | 0.456 | 0.064 | 0.627 | 0.457 |
 | ViT-B-16-SigLip | 0.480 | 0.070 | 0.650 | 0.484 |
 | ViT-L-16-SigLip | 0.544 | 0.077 | 0.715 | 0.548 |
-| Marqo-Ecommerce-B | 0.592 | 0.089 | 0.795 | 0.597 |
-| Marqo-Ecommerce-L | **0.658** | **0.096** | **0.854** | **0.663** |
 
 
 

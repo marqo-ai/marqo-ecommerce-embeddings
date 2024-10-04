@@ -50,7 +50,58 @@ print("Label probs:", text_probs)
 # [9.9955e-01, 4.4712e-04, 4.4010e-06]]
 ```
 ### HuggingFace with transformers
+```python
+from transformers import AutoModel, AutoProcessor
+import torch
+from PIL import Image
+import requests
+# model_name= 'Marqo/marqo-ecommerce-embeddings-L'
+model_name = 'Marqo/marqo-ecommerce-embeddings-B'
 
+model_1 = AutoModel.from_pretrained(model_name, trust_remote_code=True)
+processor_1 = AutoProcessor.from_pretrained(model_name, trust_remote_code=True)
+
+img = Image.open(requests.get('https://raw.githubusercontent.com/marqo-ai/marqo-FashionCLIP/main/docs/fashion-hippo.png', stream=True).raw).convert("RGB")
+image_1 = [img]
+text_1 = ["a hat", "a t-shirt", "shoes"]
+processed_1 = processor_1(text=text_1, images=image_1, padding='max_length', return_tensors="pt")
+processor_1.image_processor.do_rescale = False
+with torch.no_grad():
+    image_features_1 = model_1.get_image_features(processed_1['pixel_values'], normalize=True)
+    text_features_1 = model_1.get_text_features(processed_1['input_ids'], normalize=True)
+
+    text_probs_1 = (100 * image_features_1 @ text_features_1.T).softmax(dim=-1)
+    
+print(text_probs_1)
+# [9.9955e-01, 4.4712e-04, 4.4010e-06]]
+```
+
+### Evaluation with GCL
+```
+git clone https://github.com/marqo-ai/GCL
+```
+Install the packages required by GCL. 
+```
+cd ./GCL
+MODEL=hf-hub:Marqo/marqo-ecommerce-B
+outdir=/MarqoModels/GE/marqo-ecommerce-B/gs-title2image2
+hfdataset=Marqo/google-shopping-general-eval
+python  evals/eval_hf_datasets_v1.py \
+      --model_name $MODEL \
+      --hf-dataset $hfdataset \
+      --output-dir $outdir \
+      --batch-size 1024 \
+      --num_workers 8 \
+      --left-key "['title']" \
+      --right-key "['image']" \
+      --img-or-txt "[['txt'], ['img']]" \
+      --left-weight "[1]" \
+      --right-weight "[1]" \
+      --run-queries-cpu \
+      --top-q 4000 \
+      --doc-id-key item_ID \
+      --context-length "[[64], [0]]"
+```
 
 
 ## Detailed Performance

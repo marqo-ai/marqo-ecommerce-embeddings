@@ -191,6 +191,16 @@ python  evals/eval_hf_datasets_v1.py \
 | ViT-B-16-SigLip | 0.480 | 0.070 | 0.650 | 0.484 |
 | ViT-L-16-SigLip | 0.544 | 0.077 | 0.715 | 0.548 |
 
-
+## Citation
+```
+@software{zhu2024marqoecommembed_2024,
+        author = {Tianyu Zhu and and Jesse Clark},
+        month = oct,
+        title = {{Marqo Ecommerce Embeddings - Foundation Model for Product Embeddings}},
+        url = {https://github.com/marqo-ai/marqo-ecommerce-embeddings/},
+        version = {1.0.0},
+        year = {2024}
+        }
+```
 
 

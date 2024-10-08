@@ -2,6 +2,7 @@
 In this work, we introduce two state-of-the-art embedding models for e-commerce: 
 Marqo-Ecommerce-B and Marqo-Ecommerce-L. 
 They are over 30% better compared to Amazon Titan Embedding services for e-commerce retrieval tasks.
+
 **Released Content**: 
 1) Marqo-Ecommerce-B and Marqo-Ecommerce-L embedding models
 2) GoogleShopping-1m and AmazonProducts-3m for evaluation

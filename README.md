@@ -1,5 +1,5 @@
 # Marqo E-commerce Embedding Models
-In this work, we introduce two state-of-the-art embedding models for e-commerce: 
+In this work, we introduce two state-of-the-art embedding models for e-commerce products: 
 Marqo-Ecommerce-B and Marqo-Ecommerce-L. 
 They are over 30% better compared to Amazon Titan Embedding services for e-commerce retrieval tasks.
 
@@ -17,7 +17,9 @@ They are over 30% better compared to Amazon Titan Embedding services for e-comme
 | Marqo-Ecommerce-B   | 203 | 768           | Marqo/marqo-ecommerce-embeddings-B | [link](https://marqo-gcl-public.s3.us-west-2.amazonaws.com/marqo-general-ecomm/marqo-ecomm-embeddings-b.pt) |
 | Marqo-Ecommerce-L   | 652 | 1024          | Marqo/marqo-ecommerce-embeddings-L | [link](https://marqo-gcl-public.s3.us-west-2.amazonaws.com/marqo-general-ecomm/marqo-ecomm-embeddings-l.pt)                                       |
 
-### HuggingFace with OpenCLIP
+### Load from HuggingFace with OpenCLIP
+To load the models in OpenCLIP, see below. The models are hosted on [Hugging Face](https://huggingface.co/collections/Marqo/marqo-ecommerce-embeddings-66f611b9bb9d035a8d164fbb) and loaded using [OpenCLIP](https://github.com/mlfoundations/open_clip).
+
 ```
 pip install open_clip_torch
 ```
@@ -28,7 +30,7 @@ import requests
 import torch
 
 # Specify model from Hugging Face Hub
-model_name = 'hf-hub:Marqo/marqo-ecommerce-embeddings-B'
+model_name = 'hf-hub:Marqo/marqo-ecommerce-embeddings-B' # or 'hf-hub:Marqo/marqo-ecommerce-embeddings-L'
 model, preprocess_train, preprocess_val = open_clip.create_model_and_transforms(model_name)
 tokenizer = open_clip.get_tokenizer(model_name)
 
@@ -50,14 +52,16 @@ with torch.no_grad(), torch.cuda.amp.autocast():
 print("Label probs:", text_probs)
 # [9.9955e-01, 4.4712e-04, 4.4010e-06]]
 ```
-### HuggingFace with transformers
+### Load from HuggingFace with transformers
+To load the models in Transformers, see below. The models are hosted on [Hugging Face](https://huggingface.co/collections/Marqo/marqo-ecommerce-embeddings-66f611b9bb9d035a8d164fbb) and loaded using [Transformers](https://github.com/huggingface/transformers).
+
 ```python
 from transformers import AutoModel, AutoProcessor
 import torch
 from PIL import Image
 import requests
-# model_name= 'Marqo/marqo-ecommerce-embeddings-L'
-model_name = 'Marqo/marqo-ecommerce-embeddings-B'
+
+model_name = 'Marqo/marqo-ecommerce-embeddings-B' # or 'Marqo/marqo-ecommerce-embeddings-L'
 
 model_1 = AutoModel.from_pretrained(model_name, trust_remote_code=True)
 processor_1 = AutoProcessor.from_pretrained(model_name, trust_remote_code=True)
@@ -77,7 +81,9 @@ print(text_probs_1)
 # [9.9955e-01, 4.4712e-04, 4.4010e-06]]
 ```
 
-### Evaluation with GCL
+### Evaluation
+[Generalised Contrastiove Learning](https://github.com/marqo-ai/GCL) (GCL) is used for the evaluation.
+
 ```
 git clone https://github.com/marqo-ai/GCL
 ```

@@ -63,21 +63,21 @@ import requests
 
 model_name = 'Marqo/marqo-ecommerce-embeddings-B' # or 'Marqo/marqo-ecommerce-embeddings-L'
 
-model_1 = AutoModel.from_pretrained(model_name, trust_remote_code=True)
-processor_1 = AutoProcessor.from_pretrained(model_name, trust_remote_code=True)
+model = AutoModel.from_pretrained(model_name, trust_remote_code=True)
+processor = AutoProcessor.from_pretrained(model_name, trust_remote_code=True)
 
 img = Image.open(requests.get('https://raw.githubusercontent.com/marqo-ai/marqo-FashionCLIP/main/docs/fashion-hippo.png', stream=True).raw).convert("RGB")
-image_1 = [img]
-text_1 = ["a hat", "a t-shirt", "shoes"]
-processed_1 = processor_1(text=text_1, images=image_1, padding='max_length', return_tensors="pt")
-processor_1.image_processor.do_rescale = False
+image = [img]
+text = ["a hat", "a t-shirt", "shoes"]
+processed = processor(text=text, images=image, padding='max_length', return_tensors="pt")
+processor.image_processor.do_rescale = False
 with torch.no_grad():
-    image_features_1 = model_1.get_image_features(processed_1['pixel_values'], normalize=True)
-    text_features_1 = model_1.get_text_features(processed_1['input_ids'], normalize=True)
+    image_features = model.get_image_features(processed['pixel_values'], normalize=True)
+    text_features = model.get_text_features(processed['input_ids'], normalize=True)
 
-    text_probs_1 = (100 * image_features_1 @ text_features_1.T).softmax(dim=-1)
+    text_probs = (100 * image_features @ text_features.T).softmax(dim=-1)
     
-print(text_probs_1)
+print(text_probs)
 # [9.9955e-01, 4.4712e-04, 4.4010e-06]]
 ```
 

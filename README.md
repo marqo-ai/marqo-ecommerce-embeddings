@@ -169,6 +169,7 @@ python  evals/eval_hf_datasets_v1.py \
 | Amazon-Titan-MultiModal | 0.475 | 0.065 | 0.648 | 0.475 |
 | ViT-B-16-SigLip | 0.476 | 0.067 | 0.660 | 0.477 |
 | ViT-L-16-SigLip | 0.540 | 0.073 | 0.722 | 0.540 |
+|ViT-SO400M-14-SigLip|0.573|0.077|0.763|0.574|0.613|
 
 
 **GoogleShopping-Category2Image Retrieval.**  
@@ -180,7 +181,8 @@ python  evals/eval_hf_datasets_v1.py \
 | Amazon-Titan-MultiModal | 0.246 | 0.429 | 0.642 | 0.446 |
 | ViT-B-16-SigLip | 0.277 | 0.458 | 0.660 | 0.473 |
 | ViT-L-16-SigLip | 0.324 | 0.497 | 0.687 | 0.509 |
-| ViT-SO400M-14-SigLip | 0.573    | 0.077    | 0.763    | 0.574    | 0.613    |
+|ViT-SO400M-14-SigLip|0.352|0.516|0.104|0.707|0.529|
+
 
 **AmazonProducts-Text2Image Retrieval.** 
 
@@ -191,6 +193,11 @@ python  evals/eval_hf_datasets_v1.py \
 | Amazon-Titan-MultiModal | 0.456 | 0.064 | 0.627 | 0.457 |
 | ViT-B-16-SigLip | 0.480 | 0.070 | 0.650 | 0.484 |
 | ViT-L-16-SigLip | 0.544 | 0.077 | 0.715 | 0.548 |
+|ViT-SO400M-14-SigLip|0.560|0.080|0.742|0.564|0.599|
+
+
+
+
 
 ## Citation
 ```

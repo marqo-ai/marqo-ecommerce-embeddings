@@ -180,6 +180,7 @@ python  evals/eval_hf_datasets_v1.py \
 | Amazon-Titan-MultiModal | 0.246 | 0.429 | 0.642 | 0.446 |
 | ViT-B-16-SigLip | 0.277 | 0.458 | 0.660 | 0.473 |
 | ViT-L-16-SigLip | 0.324 | 0.497 | 0.687 | 0.509 |
+| ViT-SO400M-14-SigLip | 0.573    | 0.077    | 0.763    | 0.574    | 0.613    |
 
 **AmazonProducts-Text2Image Retrieval.** 
 

@@ -13,11 +13,10 @@ More benchmarking results can be found below.
 <img src="performance.png" alt="multi split visual" width="700"/>
 
 ## Models
-
-| **Embedding Model** | **#Params (m)** | **Dimension** | **HuggingFace**                    | **Download .pt**                                                                                            |
-|---------------------| --- |---------------|------------------------------------|-------------------------------------------------------------------------------------------------------------|
-| Marqo-Ecommerce-B   | 203 | 768           | [Marqo/marqo-ecommerce-embeddings-B](https://huggingface.co/Marqo/marqo-ecommerce-embeddings-B) | [link](https://marqo-gcl-public.s3.us-west-2.amazonaws.com/marqo-general-ecomm/marqo-ecomm-embeddings-b.pt) |
-| Marqo-Ecommerce-L   | 652 | 1024          | [Marqo/marqo-ecommerce-embeddings-L](https://huggingface.co/Marqo/marqo-ecommerce-embeddings-L) | [link](https://marqo-gcl-public.s3.us-west-2.amazonaws.com/marqo-general-ecomm/marqo-ecomm-embeddings-l.pt)                                       |
+| **Embedding Model** | **#Params (m)** | **Dimension** | **HuggingFace**                    | **Download .pt**                                                                                            | **Single Batch Text Inference (A10g)** | **Single Batch Image Inference (A10g)** |
+|---------------------|-----------------|---------------|------------------------------------|-------------------------------------------------------------------------------------------------------------|----------------------------------------|-----------------------------------------|
+| Marqo-Ecommerce-B   | 203             | 768           | [Marqo/marqo-ecommerce-embeddings-B](https://huggingface.co/Marqo/marqo-ecommerce-embeddings-B) | [link](https://marqo-gcl-public.s3.us-west-2.amazonaws.com/marqo-general-ecomm/marqo-ecomm-embeddings-b.pt) | 5.1 ms                                 | 5.7 ms                                  |
+| Marqo-Ecommerce-L   | 652             | 1024          | [Marqo/marqo-ecommerce-embeddings-L](https://huggingface.co/Marqo/marqo-ecommerce-embeddings-L) | [link](https://marqo-gcl-public.s3.us-west-2.amazonaws.com/marqo-general-ecomm/marqo-ecomm-embeddings-l.pt) | 10.3 ms                                | 11.0 ms                                 |
 
 ### Load from HuggingFace with OpenCLIP
 To load the models in OpenCLIP, see below. The models are hosted on [Hugging Face](https://huggingface.co/collections/Marqo/marqo-ecommerce-embeddings-66f611b9bb9d035a8d164fbb) and loaded using [OpenCLIP](https://github.com/mlfoundations/open_clip). You can also find this code inside `run_models.py`.

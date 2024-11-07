@@ -1,5 +1,5 @@
 # Marqo Ecommerce Embedding Models
-In this work, we introduce two state-of-the-art embedding models for ecommerce products: Marqo-Ecommerce-B and Marqo-Ecommerce-L. 
+In this work, we introduce two state-of-the-art embedding models for ecommerce products: [Marqo-Ecommerce-B](https://huggingface.co/Marqo/marqo-ecommerce-embeddings-B) and [Marqo-Ecommerce-L](https://huggingface.co/Marqo/marqo-ecommerce-embeddings-L). 
 
 The benchmarking results highlight a remarkable performance by marqo-ecommerce models, which both consistently outperformed all other models across various metrics. Specifically, for the Google Shopping Text-to-Image task, marqo-ecommerce-L achieved an improvement of 43% in MRR, 41% in nDCG@10 and 33% in Recall@10 when compared to ViT-B-16-SigLIP which is our baseline model for these benchmarks. For the Google Shopping Category-to-Image task, we saw an improvement of 67% in mAP, 41% in nDCG@10 and 42% in Precision@10. 
 

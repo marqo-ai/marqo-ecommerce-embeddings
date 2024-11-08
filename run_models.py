@@ -1,9 +1,10 @@
+
+# -------- Run Models with Hugging Face Transformers --------
+
 from transformers import AutoModel, AutoProcessor
 import torch
 from PIL import Image
 import requests
-
-# -------- Run Models with Hugging Face Transformers --------
 
 model_name= 'Marqo/marqo-ecommerce-embeddings-L'
 # model_name = 'Marqo/marqo-ecommerce-embeddings-B'

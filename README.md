@@ -1,6 +1,13 @@
 <a href="https://www.marqo.ai/blog/introducing-marqos-ecommerce-embedding-models">
 <img src="https://img.shields.io/badge/Model_Release-Blog-blue?logo=font-awesome&logoColor=white&style=flat&logo=pencil-alt" alt="Blog">
 </a>
+<a href="https://huggingface.co/collections/Marqo/marqo-ecommerce-embeddings-66f611b9bb9d035a8d164fbb">
+    <img src="https://img.shields.io/badge/🤗-Hugging_Face-yellow?logo=hugging-face&logoColor=white&style=flat&logo=pencil-alt" alt="Hugging Face">
+</a>
+<a href="https://www.marqo.ai/blog/how-to-build-an-ecommerce-image-search-application">
+<img src="https://img.shields.io/badge/Ecommerce_Search_-Blog-red?logo=font-awesome&logoColor=white&style=flat&logo=pencil-alt" alt="Blog">
+</a>
+
 
 # Marqo Ecommerce Embedding Models
 In this work, we introduce two state-of-the-art embedding models for ecommerce products: [Marqo-Ecommerce-B](https://huggingface.co/Marqo/marqo-ecommerce-embeddings-B) and [Marqo-Ecommerce-L](https://huggingface.co/Marqo/marqo-ecommerce-embeddings-L). 

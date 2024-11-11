@@ -1,4 +1,6 @@
+<a href="https://www.marqo.ai/blog/introducing-marqos-ecommerce-embedding-models">
 <img src="https://img.shields.io/badge/Model_Release-Blog-blue?logo=font-awesome&logoColor=white&style=flat&logo=pencil-alt" alt="Blog">
+</a>
 
 # Marqo Ecommerce Embedding Models
 In this work, we introduce two state-of-the-art embedding models for ecommerce products: [Marqo-Ecommerce-B](https://huggingface.co/Marqo/marqo-ecommerce-embeddings-B) and [Marqo-Ecommerce-L](https://huggingface.co/Marqo/marqo-ecommerce-embeddings-L). 

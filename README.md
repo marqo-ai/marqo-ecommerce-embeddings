@@ -10,7 +10,9 @@
 <a href="https://colab.research.google.com/drive/1ctqDrXs_P-RIOPc9xcUF83WLdYQ0wf-8?usp=sharing">
 <img src="https://img.shields.io/badge/🤝_-Open_In_Google_Colab-orange?logo=font-awesome&logoColor=white&style=flat&logo=pencil-alt" alt="Blog">
 </a>
-
+<a href="https://join.slack.com/t/marqo-community/shared_invite/zt-2b4nsvbd2-TDf8agPszzWH5hYKBMIgDA">
+<img src="https://img.shields.io/badge/Slack-Join_Marqo_Community-purple?logo=Slack" alt=Slack Community">
+</a>
 
 # Marqo Ecommerce Embedding Models
 In this work, we introduce two state-of-the-art embedding models for ecommerce products: [Marqo-Ecommerce-B](https://huggingface.co/Marqo/marqo-ecommerce-embeddings-B) and [Marqo-Ecommerce-L](https://huggingface.co/Marqo/marqo-ecommerce-embeddings-L). 

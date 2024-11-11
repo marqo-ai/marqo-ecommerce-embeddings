@@ -229,7 +229,7 @@ Marqo-Ecommerce-Hard looks into the comprehensive evaluation conducted using the
 
 
 ### Marqo-Ecommerce-Easy
-This dataset is about 10-30 times smaller than the Marqo-Ecommerce-Hard, and  designed to accommodate rate-limited models, specifically Cohere-Embeddings-v3 and GCP-Vertex.
+As mentioned, our benchmarking process was divided into two distinct scenarios: marqo-ecommerce-hard and marqo-ecommerce-easy. This section covers the latter which features a corpus 10-30 times smaller and was designed to accommodate rate-limited models. We will look into the comprehensive evaluation conducted using the full 200k products across the two datasets. In addition to the models already benchmarked above, these benchmarks also include Cohere-embedding-v3 and GCP-Vertex.
 
 **GoogleShopping-Text2Image Retrieval.**
 

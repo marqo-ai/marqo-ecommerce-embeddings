@@ -1,7 +1,7 @@
 # Marqo Ecommerce Embedding Models
 In this work, we introduce two state-of-the-art embedding models for ecommerce products: [Marqo-Ecommerce-B](https://huggingface.co/Marqo/marqo-ecommerce-embeddings-B) and [Marqo-Ecommerce-L](https://huggingface.co/Marqo/marqo-ecommerce-embeddings-L). 
 
-The benchmarking results show that the **Marqo-Ecommerce models** consistently outperformed *all other models* across various metrics. Specifically, `marqo-ecommerce-L` achieved an average improvement of **17.6% in MRR** and **20.5% in nDCG@10** when compared with the current best open source model, `ViT-SO400M-14-SigLIP` across all three tasks. When compared with the best private model, `Amazon-Titan-Multimodal`, we saw an average improvement of **38.9% in MRR** and **45.1% in nDCG@10** across all three tasks, and **35.9% in Recall** across the Text-to-Image tasks. 
+The benchmarking results show that the Marqo-Ecommerce models consistently outperformed all other models across various metrics. Specifically, `marqo-ecommerce-L` achieved an average improvement of **17.6% in MRR** and **20.5% in nDCG@10** when compared with the current best open source model, `ViT-SO400M-14-SigLIP` across all three tasks in the `marqo-ecommerce-hard` dataset. When compared with the best private model, `Amazon-Titan-Multimodal`, we saw an average improvement of **38.9% in MRR** and **45.1% in nDCG@10** across all three tasks, and **35.9% in Recall** across the Text-to-Image tasks in the `marqo-ecommerce-hard` dataset.
 
 More benchmarking results can be found below.
 

@@ -7,6 +7,9 @@
 <a href="https://www.marqo.ai/blog/how-to-build-an-ecommerce-image-search-application">
 <img src="https://img.shields.io/badge/Ecommerce_Search_-Blog-red?logo=font-awesome&logoColor=white&style=flat&logo=pencil-alt" alt="Blog">
 </a>
+<a href="https://colab.research.google.com/drive/1ctqDrXs_P-RIOPc9xcUF83WLdYQ0wf-8?usp=sharing">
+<img src="https://img.shields.io/badge/🤝_-Open_In_Google_Colab-orange?logo=font-awesome&logoColor=white&style=flat&logo=pencil-alt" alt="Blog">
+</a>
 
 
 # Marqo Ecommerce Embedding Models

@@ -166,7 +166,7 @@ python  evals/eval_hf_datasets_v1.py \
 
 
 ## Detailed Performance
-The benchmarks are separated into 'Marqo-Ecommerce-Hard' and '100k-Marqo-Ecommerce-Easy'. The "easy" dataset is about 10-30 times smaller, and designed to accommodate rate-limited models, specifically Cohere-Embeddings-v3 and GCP-Vertex. The "hard" dataset represents the true challenge, since it contains four million ecommerce product listings, which pushes these models to their limits in a real-world, ecommerce scenario.
+Our benchmarking process was divided into two distinct regimes, each using different datasets of ecommerce product listings: marqo-ecommerce-hard and marqo-ecommerce-easy. Both datasets contained product images and text and only differed in size. The "easy" dataset is approximately 10-30 times smaller (200k vs 4M products), and designed to accommodate rate-limited models, specifically Cohere-Embeddings-v3 and GCP-Vertex (with limits of 0.66 rps and 2 rps respectively). The "hard" dataset represents the true challenge, since it contains four million ecommerce product listings and is more representative of real-world ecommerce search scenarios.
 
 Within both these scenarios, the models were benchmarked against three different tasks:
 
@@ -218,7 +218,7 @@ Marqo-Ecommerce-Hard looks into the comprehensive evaluation conducted using the
 
 
 
-### 100k-Marqo-Ecommerce-Easy
+### Marqo-Ecommerce-Easy
 This dataset is about 10-30 times smaller than the Marqo-Ecommerce-Hard, and  designed to accommodate rate-limited models, specifically Cohere-Embeddings-v3 and GCP-Vertex.
 
 **GoogleShopping-Text2Image Retrieval.**

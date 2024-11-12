@@ -111,7 +111,8 @@ Install the packages required by GCL.
 ```
 cd ./GCL
 MODEL=hf-hub:Marqo/marqo-ecommerce-B
-outdir=/MarqoModels/GE/marqo-ecommerce-B/gs-title2image
+outdir=MarqoModels/GE/marqo-ecommerce-B/gs-title2image
+mkdir -p $outdir
 hfdataset=Marqo/google-shopping-general-eval
 python  evals/eval_hf_datasets_v1.py \
       --model_name $MODEL \
@@ -134,7 +135,8 @@ python  evals/eval_hf_datasets_v1.py \
 ```
 cd ./GCL
 MODEL=hf-hub:Marqo/marqo-ecommerce-B
-outdir=/MarqoModels/GE/marqo-ecommerce-B/gs-cat2image
+outdir=MarqoModels/GE/marqo-ecommerce-B/gs-cat2image
+mkdir -p $outdir
 hfdataset=Marqo/google-shopping-general-eval
 python  evals/eval_hf_datasets_v1.py \
       --model_name $MODEL \
@@ -157,7 +159,8 @@ python  evals/eval_hf_datasets_v1.py \
 ```
 cd ./GCL
 MODEL=hf-hub:Marqo/marqo-ecommerce-B
-outdir=/MarqoModels/GE/marqo-ecommerce-B/ap-title2image
+outdir=MarqoModels/GE/marqo-ecommerce-B/ap-title2image
+mkdir -p $outdir
 hfdataset=Marqo/amazon-products-eval
 python  evals/eval_hf_datasets_v1.py \
       --model_name $MODEL \

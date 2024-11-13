@@ -100,7 +100,7 @@ print(text_probs)
 ```
 
 ### Evaluation
-[Generalised Contrastiove Learning](https://github.com/marqo-ai/GCL) (GCL) is used for the evaluation. The following code can also be found in `scripts`.
+[Generalised Contrastive Learning](https://github.com/marqo-ai/GCL) (GCL) is used for the evaluation. The following code can also be found in `scripts`.
 
 ```
 git clone https://github.com/marqo-ai/GCL
